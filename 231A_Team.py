@@ -28,3 +28,14 @@ In the first sample Petya and Vasya are sure that they know how to solve the fir
 
 In the second sample the friends will only implement the second problem, as Vasya and Tonya are sure about the solution.
 """
+
+def team(knowledge) -> int:
+    summ = 0
+    for k in knowledge:
+        if sum(k) > 1: summ += 1
+    return summ
+
+
+numberOfProblems = int(input())
+knowledge = [list(map(int, input().split())) for _ in range(numberOfProblems)]
+print(team(knowledge))
